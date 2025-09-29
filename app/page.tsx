@@ -1,6 +1,5 @@
-import Image from "next/image";
 import Showcase from "./components/(Home)/Showcase";
-import About from  "@/app/components/About"
+import About from "./components/(Home)/About";
 import Footer from "./components/Footer";
 export default function Home() {
   return (
