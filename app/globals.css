@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme{
+  --color-primary:#030B16;
+  --color-input-bg:#2D3C51;
+  --color-gray-txt:#C7C7CC;
+  --color-header-txt:#F2F2F7;
+  --color-light-purple: #EDC8FF;
+
+  --color-dark-purple: #0C0020
+}
+
+.radial-glow{
+  background: radial-gradient(circle, #397FF7, #602EEF);
+  box-shadow: 0 0 48px rgba(124, 87, 246, 0.59); /* #7C57F696 */
+}
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);          
+  -webkit-backdrop-filter: blur(10px);   
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+
+ .circle-btn {
+  position: relative;
+  background: #6155F5; 
+  border-radius:200px; 
+  z-index: 1;
+}
+
+.circle-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 200px; /* match parent shape */
+  padding: 1px; /* border thickness */
+  background: linear-gradient(90deg, #00000080, #FFFFFF80);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
