@@ -1,31 +1,30 @@
 @import "tailwindcss";
 
-@theme{
-  --color-primary:#030B16;
-  --color-input-bg:#2D3C51;
-  --color-gray-txt:#C7C7CC;
-  --color-header-txt:#F2F2F7;
-  --color-light-purple: #EDC8FF;
+@theme {
+  --color-primary: #030b16;
+  --color-input-bg: #2d3c51;
+  --color-gray-txt: #c7c7cc;
+  --color-header-txt: #f2f2f7;
+  --color-light-purple: #edc8ff;
 
-  --color-dark-purple: #0C0020
+  --color-dark-purple: #0c0020;
 }
 
-.radial-glow{
-  background: radial-gradient(circle, #397FF7, #602EEF);
+.radial-glow {
+  background: radial-gradient(circle, #397ff7, #602eef);
   box-shadow: 0 0 48px rgba(124, 87, 246, 0.59); /* #7C57F696 */
 }
 .glass {
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);          
-  -webkit-backdrop-filter: blur(10px);   
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-
 }
 
- .circle-btn {
+.circle-btn {
   position: relative;
-  background: #6155F5; 
-  border-radius:200px; 
+  background: #6155f5;
+  border-radius: 200px;
   z-index: 1;
 }
 
@@ -35,30 +34,27 @@
   inset: 0;
   border-radius: 200px; /* match parent shape */
   padding: 1px; /* border thickness */
-  background: linear-gradient(90deg, #00000080, #FFFFFF80);
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
+  background: linear-gradient(90deg, #00000080, #ffffff80);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
-          mask-composite: exclude;
+  mask-composite: exclude;
   pointer-events: none;
 }
 
-.verified_card{
-  
+.verified_card {
   width: 300px;
   padding: 20px;
   border-radius: 16px;
   background: linear-gradient(
     135deg,
-    #2BFFFF1A 10%,
-    #2BFFFF05 50%,
-    #2BFFFF0F 100%
+    #2bffff1a 10%,
+    #2bffff05 50%,
+    #2bffff0f 100%
   );
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 
-  border: 1px solid  #EDC8FF4D ;
+  border: 1px solid #edc8ff4d;
   /* border-image: linear-gradient(
     135deg,
     #EDC8FF4D 30%,
@@ -67,6 +63,4 @@
   ) 1; */
 
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-
-
 }
