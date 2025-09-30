@@ -43,3 +43,30 @@
           mask-composite: exclude;
   pointer-events: none;
 }
+
+.verified_card{
+  
+  width: 300px;
+  padding: 20px;
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    #2BFFFF1A 10%,
+    #2BFFFF05 50%,
+    #2BFFFF0F 100%
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid  #EDC8FF4D ;
+  /* border-image: linear-gradient(
+    135deg,
+    #EDC8FF4D 30%,
+    #EDC8FF2B 60%,
+    #EDC8FF 100%
+  ) 1; */
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+
+}
