@@ -30,10 +30,10 @@ const WhyChoose = () => {
         <div className="flex-1">
           <div>
             <h1 className="text-[40px] font-bold text-header-txt">
-              Why Choose LuxNet?
+              Why Choose Verrify?
             </h1>
             <p className="text-gray-txt">
-              At LuxNet we prioritize innovation,We help you easily verify and
+              At Verrify we prioritize innovation,We help you easily verify and
               secure genuine land with trusted checks and clear reports.
             </p>
           </div>
