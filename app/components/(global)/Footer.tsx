@@ -1,5 +1,5 @@
 import React from "react";
-import SocialRing from "./(global)/SocialRing";
+import SocialRing from "./SocialRing";
 import {
   FaFacebookF,
   FaInstagram,

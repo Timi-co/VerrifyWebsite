@@ -1,6 +1,6 @@
 import Showcase from "./components/(Home)/Showcase";
 import About from "./components/(Home)/About";
-import Footer from "./components/Footer";
+import Footer from "./components/(global)/Footer";
 import VerifiedEasy from "./components/(Home)/VerifiedEasy";
 import WhyChoose from "./components/(Home)/WhyChoose";
 import BlogShowcase from "./components/(Home)/BlogShowcase";

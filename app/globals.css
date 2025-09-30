@@ -11,8 +11,8 @@
 }
 
 .radial-glow {
-  background: radial-gradient(circle, #397ff7, #602eef);
-  box-shadow: 0 0 48px rgba(124, 87, 246, 0.59); /* #7C57F696 */
+  background: radial-gradient(circle, #397ff7, #602eef) !important;
+  box-shadow: 0 0 48px rgba(124, 87, 246, 0.59) !important; /* #7C57F696 */
 }
 .glass {
   background: rgba(255, 255, 255, 0.1);
@@ -63,4 +63,32 @@
   ) 1; */
 
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.testimonial_card{
+  padding: 20px;
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    #2bffff1a 10%,
+    #2bffff05 50%,
+    #2bffff0f 100%
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid #edc8ff4d;
+  /* border-image: linear-gradient(
+    135deg,
+    #EDC8FF4D 30%,
+    #EDC8FF2B 60%,
+    #EDC8FF 100%
+  ) 1; */
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.slick-prev:before,
+.slick-next:before {
+  content: "" !important;
 }
