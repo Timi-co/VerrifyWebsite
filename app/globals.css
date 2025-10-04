@@ -92,3 +92,9 @@
 .slick-next:before {
   content: "" !important;
 }
+
+.about_bg{
+  background-image:  linear-gradient(rgba(237, 200, 255, 0.5), rgba(237, 200, 255, 0.5)), url('/images/aboutShowcase.png');
+  background-position: center;
+  background-size: cover;
+}

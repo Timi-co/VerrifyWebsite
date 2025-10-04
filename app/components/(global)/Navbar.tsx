@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Logo from "@/public/svg/logo.svg";
+import Link from "next/link";
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -32,7 +33,7 @@ const Navbar = () => {
         </div>
         <div className="flex text-white gap-[20px] text-[16px] w-fit">
           <a href="#">Home</a>
-          <a href="#">About us</a>
+          <Link href="/about">About us</Link>
           <a href="#">Blog</a>
           <a href="#">FAQ</a>
         </div>
