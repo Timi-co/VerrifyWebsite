@@ -46,12 +46,12 @@ const Footer = () => {
       <div className="flex flex-col gap-[12px]">
         <h3 className="text-lg font-[500] text-header-txt">Contact us</h3>
         <div className="text-[16px] flex flex-col gap-[10px] text-gray-txt">
-          <a href="#" className="flex gap-2 items-center ">
+          <p className="flex gap-2 items-center ">
             <span>
               <FaPhoneAlt />
             </span>{" "}
             +123 456 7890
-          </a>
+          </p>
           <a href="#" className="flex gap-2 items-center">
             <span>
               <CiMail />

@@ -35,7 +35,7 @@ const Navbar = () => {
           <Link href="/">Home</Link>
           <Link href="/about">About us</Link>
           <Link href="/blog">Blog</Link>
-          <a href="#">FAQ</a>
+          <Link href="/contact">Contact</Link>
         </div>
         <a href="#">
           <button className="circle-btn py-[10px] px-[30px] text-white text-[14px] ">Sign In</button>
