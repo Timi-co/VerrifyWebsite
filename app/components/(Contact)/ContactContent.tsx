@@ -6,12 +6,12 @@ import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
-  FaPhoneAlt,
+  
 } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import Image from "next/image";
 import Wave from "@/public/images/wave.png";
-
+import {successToast ,  errorToast} from '@/app/utils/alerts'
 const ContactContent = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [successMsg, setSuccessMsg] = useState("");
@@ -51,11 +51,13 @@ const ContactContent = () => {
         throw new Error(data.message || "Something went wrong");
       }
 
-      setSuccessMsg("✅ Message sent successfully!");
+    //   setSuccessMsg("✅ Message sent successfully!");
+      successToast('Message sent successfully!')
       setFormData({ name: "", email: "", phone: "", message: "" });
     } catch (error) {
       console.error(error);
-      setErrorMsg("❌ Failed to send message. Please try again.");
+    //   setErrorMsg("❌ Failed to send message. Please try again.");
+      errorToast('Failed to send message. Please try again.')
     } finally {
       setIsLoading(false);
     }

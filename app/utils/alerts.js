@@ -1,33 +1,46 @@
 import Swal from "sweetalert2";
 
 
-export const successAlert = (title = "Success!", message = "Operation completed successfully.") => {
+export const successToast = (message) => {
   return Swal.fire({
+    toast: true,
+    position: "top-end", 
     icon: "success",
-    title,
-    text: message,
-    confirmButtonColor: "#ec4899", 
+    title: message,
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    background: "#fff",
+    color: "#333",
   });
 };
 
 
-export const errorAlert = (title = "Oops!", message = "Something went wrong.") => {
+export const errorToast = (message) => {
   return Swal.fire({
+    toast: true,
+    position: "top-end",
     icon: "error",
-    title,
-    text: message,
-    confirmButtonColor: "#ec4899",
+    title: message,
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    background: "#fff",
+    color: "#333",
   });
 };
 
-export const warningAlert = (title = "Are you sure?", message = "You can’t undo this action.") => {
+
+export const warningToast = (message) => {
   return Swal.fire({
+    toast: true,
+    position: "top-end",
     icon: "warning",
-    title,
-    text: message,
-    showCancelButton: true,
-    confirmButtonColor: "#ec4899",
-    cancelButtonColor: "#6b7280",
-    confirmButtonText: "Yes, proceed",
+    title: message,
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    background: "#fff",
+    color: "#333",
   });
 };
