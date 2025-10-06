@@ -98,3 +98,9 @@
   background-position: center;
   background-size: cover;
 }
+
+.privacy_bg{
+  background-image:  linear-gradient(rgba(237, 200, 255, 0.5), rgba(237, 200, 255, 0.5)), url('/images/guardImage.png');
+  background-position: center;
+  background-size: cover;
+}

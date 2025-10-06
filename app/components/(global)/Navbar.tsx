@@ -32,9 +32,9 @@ const Navbar = () => {
           <Image width={80} height={80} src={Logo} alt="Logo" />
         </div>
         <div className="flex text-white gap-[20px] text-[16px] w-fit">
-          <a href="#">Home</a>
+          <Link href="/">Home</Link>
           <Link href="/about">About us</Link>
-          <a href="#">Blog</a>
+          <Link href="/blog">Blog</Link>
           <a href="#">FAQ</a>
         </div>
         <a href="#">

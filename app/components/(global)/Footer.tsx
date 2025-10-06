@@ -1,5 +1,6 @@
 import React from "react";
 import SocialRing from "./SocialRing";
+import Link from "next/link";
 import {
   FaFacebookF,
   FaInstagram,
@@ -81,9 +82,9 @@ const Footer = () => {
           <a href="#" className="flex gap-2 items-center ">
             Privacy Policy
           </a>
-          <a href="#" className="flex gap-2 items-center">
+          <Link href="/termsofservice" className="flex gap-2 items-center">
             Terms of Service
-          </a>
+          </Link>
         </div>
       </div>
     </footer>
