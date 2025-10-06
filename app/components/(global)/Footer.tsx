@@ -79,9 +79,9 @@ const Footer = () => {
         <h3 className="text-lg font-[500] text-header-txt">Legal</h3>
 
         <div className="text-[16px] flex flex-col gap-[10px] text-gray-txt">
-          <a href="#" className="flex gap-2 items-center ">
+          <Link href="/privacypolicy" className="flex gap-2 items-center ">
             Privacy Policy
-          </a>
+          </Link>
           <Link href="/termsofservice" className="flex gap-2 items-center">
             Terms of Service
           </Link>
