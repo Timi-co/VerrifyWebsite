@@ -26,18 +26,18 @@ const cardOptions = [
 ];
 const VerifiedEasy = () => {
   return (
-    <div className="px-[80px] flex flex-col gap-[80px] py-[100px]">
+    <div className="px-[20px] lg:px-[80px] flex flex-col gap-[80px] py-[50px] md:py-[100px]">
       <div className="flex flex-col gap-[15px] items-center">
         <TextHeading
           title="Getting Verified Is Easy"
           subText="Here’s how we help you check and secure property details fast."
         />
       </div>
-      <div className="flex gap-[30px] justify-center">
+      <div className="grid grid-cols-1 md:flex  md:flex-row gap-[30px] justify-center">
         {cardOptions.map((card) => (
           <div
             key={card.id}
-            className="verified_card h-[350px] flex flex-col justify-center gap-[15px]"
+            className="verified_card md:w-[300px] h-[350px] flex flex-col justify-center gap-[15px]"
           >
             <Image height={90} width={90} src={card.image} alt="verifiedOne" />
             <h3 className="text-header-txt text-[20px] font-[500]">

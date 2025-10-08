@@ -12,9 +12,9 @@ export default function Home() {
       <About />
       <VerifiedEasy />
       <WhyChoose />
-      <BlogShowcase />
+       {/*<BlogShowcase />
       <Testimonial />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }

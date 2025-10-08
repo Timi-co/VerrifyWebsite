@@ -6,7 +6,7 @@ type headingProps = {
 export default function TextHeading({ title, subText }: headingProps) {
   return (
     <div>
-      <h1 className="text-header-txt text-[40px] font-bold">
+      <h1 className="text-header-txt text-[30px] md:text-[40px] font-bold">
         {title}
       </h1>
       <p className="text-gray-txt">

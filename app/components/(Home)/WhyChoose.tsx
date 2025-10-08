@@ -26,8 +26,8 @@ const whyChooseData = [
 ];
 const WhyChoose = () => {
   return (
-    <div className="py-[100px] px-[80px] ">
-      <div className="max-w-[1440px] mx-auto flex gap-[50px] items-center">
+    <div className="py-[50px] lg:py-[100px] px-[20px] lg:px-[80px] ">
+      <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row gap-[50px] items-center">
         <div className="flex-1">
           <TextHeading
             title="Why Choose Verrify?"
