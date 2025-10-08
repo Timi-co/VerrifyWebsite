@@ -41,7 +41,7 @@ const BlogShowcase = () => {
   const featuredPost = blogPosts.find((post) => post.featured);
   const otherPosts = blogPosts.filter((post) => !post.featured);
   return (
-    <div className="px-[80px] py-[100px]">
+    <div className="px-[20px] lg:px-[80px] py-[100px]">
       <div className="flex flex-col gap-[80px]">
         <TextHeading
           title="Complete Guidance for Every Real Estate Journey"
@@ -49,7 +49,7 @@ const BlogShowcase = () => {
             for individuals, businesses, and private buyers alike."
         />
    
-        <div className="flex gap-[40px]">
+        <div className="flex flex-col lg:flex-row gap-[40px]">
           {/* Big Story Section */}
           <div className="flex-1 flex flex-col gap-[20px]">
             {featuredPost && (

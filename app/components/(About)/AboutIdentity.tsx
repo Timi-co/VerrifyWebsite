@@ -4,8 +4,8 @@ import Image from "next/image";
 import Button from "../(global)/Button";
 const AboutIdentity = () => {
   return (
-    <div className="py-[100px] px-[80px]">
-      <div className="max-w-[1440px] mx-auto flex items-center gap-[40px]">
+    <div className="py-[100px] px-[20px] lg:px-[80px]">
+      <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row items-center gap-[40px]">
         <div className="testimonial_card flex-1">
           <Image
             src={aboutVerified}

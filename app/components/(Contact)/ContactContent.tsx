@@ -64,8 +64,8 @@ const ContactContent = () => {
   };
 
   return (
-    <div className="py-[100px] px-[80px] ">
-      <div className="flex justify-between items-center testimonial_card">
+    <div className="py-[100px] px-[20px] lg:px-[80px] ">
+      <div className="flex flex-col gap-[30px] md:flex-row justify-between items-center testimonial_card">
         <div className="flex flex-col gap-[10px] items-center justify-center">
           <h2 className="text-[20px] font-bold text-header-txt">
             Phone Number
@@ -96,12 +96,12 @@ const ContactContent = () => {
 
       <div className="flex mt-[50px]">
         <div className="flex flex-col items-center w-full gap-[30px]">
-          <h1 className="text-[40px] text-center text-header-txt font-bold w-full flex items-center justify-center">
+          <h1 className="text-[30px] lg:text-[40px] text-center text-header-txt font-bold w-full flex items-center justify-center">
             Love to hear from you, Get in touch{" "}
             <Image className="w-fit h-[40px]" src={Wave} alt="hands waving" />
           </h1>
 
-          <form className="w-[700px]" onSubmit={handleSubmit}>
+          <form className="w-full md:w-[700px]" onSubmit={handleSubmit}>
             <div className="flex flex-col gap-[20px]">
               <div className="flex flex-col gap-[10px]">
                 <label className="text-gray-txt">Email Address</label>

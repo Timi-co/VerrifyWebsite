@@ -5,7 +5,7 @@ import TextHeading from "../(global)/TextHeading";
 import layerBlur from "@/public/images/layerBlur.png";
 const Founder = () => {
   return (
-    <div className="px-[80px] py-[100px]">
+    <div className="px-[20px] lg:px-[80px] md:py-[50px] lg:py-[100px]">
       <div className="max-w-[1440px] mx-auto flex flex-col gap-[80px]">
         <div className="text-center">
           <TextHeading
@@ -13,9 +13,9 @@ const Founder = () => {
             subText="The vision and passion behind our mission."
           />
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center flex-col gap-[30px] lg:flex-row">
           <div className="flex-1 flex justify-center relative">
-            <div className="h-[400px] w-fit flex flex-col gap-[20px] relative">
+            <div className="lg:h-[400px] w-fit flex flex-col gap-[20px] relative">
               <Image
                 className="absolute left-[-10%] top-[-5%] height={80}"
                 src={layerBlur}
@@ -27,7 +27,7 @@ const Founder = () => {
                 src={ceoImage}
                 alt="CEO Image"
               />
-              <div className="flex flex-col gap-[5px]">
+              <div className="flex flex-col items-center  gap-[5px]">
                 <h4 className="text-header-txt text-[18px] font-[500]">Timi Joseph</h4>
                 <p className="text-gray-txt text-[14px]">Founder</p>
               </div>

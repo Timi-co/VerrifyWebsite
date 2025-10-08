@@ -9,7 +9,7 @@ import { FaAngleRight } from "react-icons/fa6";
 const AboutShowcase = ({bgClass, pageTitle}:ShowcaseProps) => {
   return (
     <>
-      <header className="bg-primary h-[25vh]">
+      <header className="bg-primary h-[10vh] lg:h-[25vh]">
         <Navbar />
       </header>
       {/* Code for Showcase Area */}

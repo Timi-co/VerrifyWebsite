@@ -14,7 +14,7 @@ const about = () => {
         <Mission />
         <Founder />
         {/* <Team /> */}
-        <Testimonial />
+        {/* <Testimonial /> */}
         <Footer />
     </div>
     

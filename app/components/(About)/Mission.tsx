@@ -17,8 +17,8 @@ const visionMission = [
 ];
 const Mission = () => {
   return (
-    <div className="py-[100px] px-[80px]">
-      <div className="max-w-[1440px] mx-auto flex">
+    <div className="py-[50px] lg:py-[100px] px-[20px] lg:px-[80px] ">
+      <div className="max-w-[1440px] mx-auto flex gap-[30px] lg:gap-0 flex-col-reverse lg:flex-row">
         <div className="flex-1 flex flex-col gap-[30px]">
           <div>
            
@@ -41,7 +41,7 @@ const Mission = () => {
             ))}
           </div>
         </div>
-        <div className="flex-1 flex justify-end">
+        <div className="flex-1 flex justify-center lg:justify-end">
           <Image width={450} src={missionImage} alt="Mission Image" />
         </div>
       </div>

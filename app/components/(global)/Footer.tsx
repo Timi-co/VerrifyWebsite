@@ -17,7 +17,7 @@ const companyLinks = [
 ];
 const Footer = () => {
   return (
-    <footer className=" text-white px-[80px] flex justify-between py-[80px]">
+    <footer className=" text-white px-[20px] lg:px-[80px] gap-[30px] flex flex-col md:flex-row md:justify-between py-[80px]">
       <div className="w-[350px] flex flex-col gap-[40px]">
         <p className="text-[16px] text-gray-txt">
           Subscribe to our newsletter and never miss an update. Stay informer
