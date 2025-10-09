@@ -5,7 +5,7 @@ type BlogProps = {
   image: StaticImageData,
   heading: string,
   subText: string,
-  link: string,
+  link?: string,
   date: string
 };
 

@@ -1,71 +1,110 @@
+"use client";
 import VerticalCard from "../(global)/VerticalCard";
-import sampleImg from "@/public/images/sampleImg.png";
+import { fetchArticles } from "../../utils/api";
+import { useState, useEffect } from "react";
 
-const blogPosts = [
-  {
-    id: 1,
-    image: sampleImg,
-    heading: "How to Verify Property Ownership Before You Buy",
-    subText:
-      "Practical steps to ensure your land or home purchase is legitimate and hassle-free.",
-    date: "12 Sept 2025",
-    link: "#",
-  },
-  {
-    id: 2,
-    image: sampleImg,
-    heading: "Why Verified Land Is Safer for Long-Term Investment",
-    subText:
-      "Discover why verification reduces risks and increases property value.",
-    date: "15 Sept 2025",
-    link: "#",
-  },
-  {
-    id: 3,
-    image: sampleImg,
-    heading: "Secure Your Plot: 5 Red Flags to Watch Out For",
-    subText:
-      "Avoid scams by spotting these warning signs before closing a deal.",
-    date: "20 Sept 2025",
-    link: "#",
-  },
-  {
-    id: 4,
-    image: sampleImg,
-    heading: "Secure Your Plot: 5 Red Flags to Watch Out For",
-    subText:
-      "Avoid scams by spotting these warning signs before closing a deal.",
-    date: "20 Sept 2025",
-    link: "#",
-  },
-  {
-    id: 5,
-    image: sampleImg,
-    heading: "Secure Your Plot: 5 Red Flags to Watch Out For",
-    subText:
-      "Avoid scams by spotting these warning signs before closing a deal.",
-    date: "20 Sept 2025",
-    link: "#",
-  },
-];
 const BlogInterface = () => {
+  const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [page, setPage] = useState(1);
+  const [meta, setMeta] = useState(null);
+
+  const limit = 6; // you can adjust as needed
+
+  const getData = async () => {
+    try {
+      setLoading(true);
+      const data = await fetchArticles({ page, limit });
+
+      if (data?.data) {
+        setArticles(data.data.data || []);
+        setMeta(data.data.meta || {});
+      }
+    } catch (error) {
+      console.error("Error fetching articles:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, [page]);
+
+  const handlePrev = () => {
+    if (meta?.hasPreviousPage) setPage((prev) => prev - 1);
+  };
+
+  const handleNext = () => {
+    if (meta?.hasNextPage) setPage((prev) => prev + 1);
+  };
+
+  if (loading)
+    return (
+      <div className="flex justify-center items-center h-[50vh]">
+        <p className="text-gray-600 text-lg">Loading articles...</p>
+      </div>
+    );
+
   return (
-    /**py-[100px]**/
-    <div className="px-[80px]  ">  
+    <div className="px-[20px] lg:px-[80px] py-[80px]">
       <div className="flex flex-col gap-[30px]">
-        <h1 className="text-header-txt text-[30px] font-bold">Blogs for Today</h1>
-        <div className="grid grid-cols-3 gap-[30px]">
-          {blogPosts.map((post) => (
-            <VerticalCard
-              key={post.id}
-              image={post.image}
-              heading={post.heading}
-              subText={post.subText}
-              link={post.link}
-              date={post.date}
-            />
-          ))}
-        </div>
+        <h1 className="text-header-txt text-[30px] font-bold">
+          Articles for Today
+        </h1>
+
+        {articles.length === 0 ? (
+          <div className="text-center py-[50px]">
+            <h1 className="text-[24px] text-gray-600 font-semibold">
+              No articles found
+            </h1>
+          </div>
+        ) : (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
+            {articles.map((article) => (
+              <VerticalCard
+                key={article.id}
+                image={article.titleImage}
+                heading={article.title}
+                subText={article.description}
+                date={new Date(article.createdAt).toLocaleDateString()}
+              />
+            ))}
+          </div>
+        )}
+
+        {/* Pagination */}
+        {meta && meta.totalPages > 1 && (
+          <div className="flex items-center justify-center gap-4 mt-8">
+            <button
+              onClick={handlePrev}
+              disabled={!meta.hasPreviousPage}
+              className={`px-4 py-2 rounded-md text-white transition ${
+                !meta.hasPreviousPage
+                  ? "bg-gray-400 cursor-not-allowed"
+                  : "bg-blue-600 hover:bg-blue-700"
+              }`}
+            >
+              Previous
+            </button>
+
+            <span className="text-gray-700 font-medium">
+              Page {meta.currentPage} of {meta.totalPages}
+            </span>
+
+            <button
+              onClick={handleNext}
+              disabled={!meta.hasNextPage}
+              className={`px-4 py-2 rounded-md text-white transition ${
+                !meta.hasNextPage
+                  ? "bg-gray-400 cursor-not-allowed"
+                  : "bg-blue-600 hover:bg-blue-700"
+              }`}
+            >
+              Next
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
