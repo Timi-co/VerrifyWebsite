@@ -2,19 +2,43 @@
 import VerticalCard from "../(global)/VerticalCard";
 import { fetchArticles } from "../../utils/api";
 import { useState, useEffect } from "react";
-
+interface Meta {
+  totalItems: number;
+  itemCount: number;
+  itemsPerPage: number;
+  totalPages: number;
+  currentPage: number;
+  hasNextPage: boolean;
+  hasPreviousPage: boolean;
+}
+interface Article {
+  id: number;
+  title: string;
+  description: string;
+  titleImage: string;
+  createdAt: string;
+}
+interface ApiResponse{
+    success: boolean;
+  message: string;
+  data: {
+    data: Article[];
+    meta: Meta;
+  };
+  status: number;
+}
 const BlogInterface = () => {
-  const [articles, setArticles] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [page, setPage] = useState(1);
-  const [meta, setMeta] = useState(null);
+  const [articles, setArticles] = useState<Article []>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [page, setPage] = useState<number>(1);
+  const [meta, setMeta] = useState<Meta | null >(null);
 
   const limit = 6; // you can adjust as needed
 
   const getData = async () => {
     try {
       setLoading(true);
-      const data = await fetchArticles({ page, limit });
+      const data: ApiResponse | null = await fetchArticles({ page, limit });
 
       if (data?.data) {
         setArticles(data.data.data || []);

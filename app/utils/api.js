@@ -6,7 +6,7 @@ export const fetchArticles = async ({
   order = "ASC",
 }) => {
   try {
-    const url = new URL(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/v1/article`);
+    const url = new URL(`${process.env.NEXT_PUBLIC_API_BASE_URL}/article`);
 
     // append query params
     url.searchParams.append("search", search);
