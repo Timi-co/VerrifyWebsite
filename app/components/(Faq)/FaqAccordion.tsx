@@ -1,21 +1,26 @@
-"use client"
+"use client";
 interface AccordionProps {
-  question:string;
-  answer:string;
+  question: string;
+  answer: string;
 }
-import { FaPlus , Faminus } from "react-icons/fa";
+import { useState } from "react";
+import { FaPlus, FaMinus } from "react-icons/fa";
 const FaqAccordion = ({ question, answer }: AccordionProps) => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="flex flex-col verified_card">
-      <div>
-        <h4>{question}</h4>
-        <div>
-            <FaPlus />
-        </div>
+      <div className="flex justify-between items-center">
+        <h4 className="text-[18px] text-header-txt">{question}</h4>
+        <div onClick={() => setIsOpen(!isOpen)} className="text-header-txt cursor-pointer">{!isOpen ? <FaPlus /> : <FaMinus />}</div>
       </div>
-      <div dangerouslySetInnerHTML={{ __html: answer }}>
-        {answer}
-      </div>
+      {isOpen && (
+        <div
+          dangerouslySetInnerHTML={{ __html: answer }}
+          className="text-gray-txt"
+        />
+   
+   
+      )}
     </div>
   );
 };

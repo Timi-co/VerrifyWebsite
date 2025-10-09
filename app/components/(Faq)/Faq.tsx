@@ -110,14 +110,14 @@ export const faqs = [
 const Faq = () => {
   return (
     <div className="px-[80px] py-[100px]">
-      <div className="max-w-[1440px] mx-auto">
+      <div className="max-w-[1440px] mx-auto flex flex-col gap-[40px]">
         <div className="text-center">
           <TextHeading
             title="Your Questions, Our Answers"
             subText="Got questions about property checks? We’ve got simple, straight answers to help you verify with confidence."
           />
         </div>
-        <div>
+        <div className="flex flex-col gap-[20px]">
           {faqs.map((data) => (
             <FaqAccordion
               key={data.id}
